@@ -1,0 +1,52 @@
+button{
+  cursor: pointer;
+  border-radius: 90px;
+  padding: 5px;
+  border-style: none;
+  color: white;
+  background-color: rgb(100, 100, 100);
+
+}
+#keys{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); 
+  gap: 10px;
+  width: 200px;
+  margin: auto;
+  background-color: black;
+  border-radius: 0 0 10px 10px;
+  padding: 10px;
+}
+
+#result{
+  background-color: rgb(72, 74, 72);
+  height: 30px;
+  border-radius: 10px 10px 0 0;
+  outline: none;
+  color: white;
+}
+
+#bar{
+  display: grid;
+  margin: auto;
+  width: 100px;
+  border-radius: 10px;
+}
+
+.calculation {
+  background-color: orange;
+}
+
+body {
+  display: flex;
+}
+
+  /* When user is typing (has focus + not empty) */
+  #result.typing {
+    background-color: #ffeb3b;   /* yellow background */
+    color: #d50000;              /* red text */
+    font-weight: bold;
+  }
+
+
+
