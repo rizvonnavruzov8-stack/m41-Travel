@@ -123,6 +123,44 @@
     </div>
   </section>
 
+  <!--Booking for beard-->
+  <section id="book">
+    <div class="container">
+      <h2 class="section-title"> Complete Your Booking for Beard</h2>
+      
+      <form id="bookingForm">
+        <input type="text" placeholder="Your Full Name" required>
+        <input type="tel" placeholder="Your Phone Number" required>
+        
+        <label><strong>Upload Payment Proof (screenshot)</strong></label>
+        <input type="file" id="paymentProof" accept="image/*" required>
+        
+        <label><strong>Choose Date (Friday only)</strong></label>
+        <input type="date" id="bookingDate" min="" required style="padding:1rem; font-size:1.1rem;">
+        
+        <label><strong>Preferred Time</strong></label>
+        <select required>
+          <option value="" disabled selected>Select time</option>
+          <option value="10:00 – 10:30">10:00 – 10:30</option>
+          <option value="10:30 – 11:00">10:30 – 11:00</option>
+          <option value="11:00 – 11:30">11:00 – 11:30</option>
+          <option value="11:30 – 12:00">11:30 – 12:00</option>
+          <option value="14:00 – 14:30">14:00 – 14:30</option>
+          <option value="14:30 – 15:00">14:30 – 15:00</option>
+          <option value="15:00 – 15:30">15:00 – 15:30</option>
+          <option value="15:30 – 16:00">15:30 – 16:00</option>
+        </select>
+
+        <button type="submit" class="btn">Complete Booking</button>
+      </form>
+
+      <div id="successMessage" class="success hidden">
+        <h3>Booking Confirmed!</h3>
+        <p>We received your payment and booking. The Master will contact you soon.<br>Thank you!</p>
+      </div>
+    </div>
+  </section>
+
   <!-- Footer -->
   <footer>
     <div class="container">
