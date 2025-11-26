@@ -79,14 +79,35 @@
 
     .insta:hover{color: rgb(104, 106, 180); transition: 0.3s; font-size: 17px;}
 
-    @media (max-width: 480px) {
-  body { font-size: 14px; }
-  h1 { font-size: 1.6rem; }
-  h2 { font-size: 1.3rem; }
+    /* FORCE mobile-friendly sizes – works even if other rules fight us */
+@media screen and (max-width: 768px) {
+  * {
+    font-size: 15px !important;
+  }
+  
+  h1 { font-size: 1.8rem !important; }
+  h2, h3 { font-size: 1.4rem !important; }
+  
   .time-slot {
     font-size: 14px !important;
-    padding: 10px 8px !important;
+    padding: 11px 10px !important;
     margin: 5px 3px !important;
+    min-height: unset !important;
   }
-  label, select, input, button { font-size: 14px !important; }
+  
+  button, input, select, label {
+    font-size: 15px !important;
+    padding: 12px 10px !important;
+  }
+  
+  .service-selection, .calendar-container, .booking-form {
+    padding: 12px !important;
+  }
+}
+
+/* Extra small phones (iPhone SE, etc.) */
+@media screen and (max-width: 380px) {
+  * { font-size: 14px !important; }
+  h1 { font-size: 1.6rem !important; }
+  .time-slot { font-size: 13px !important; padding: 10px 8px !important; }
 }
