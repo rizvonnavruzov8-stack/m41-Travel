@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M41 Travel | Professional Adventure Tours in Central Asia</title>
+    <link rel="stylesheet" href="travel.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo-container">
+                <div class="logo-3d">
+                    <span class="logo-front">M41</span>
+                    <span class="logo-back">Travel</span>
+                </div>
+                <div class="logo-subtitle">Professional Central Asia Tours</div>
+            </div>
+            
+            <nav class="nav-3d">
+                <div class="nav-inner">
+                    <a href="#home" class="nav-item">
+                        <i class="fas fa-compass"></i>
+                        <span>Home</span>
+                    </a>
+                    <a href="#team" class="nav-item">
+                        <i class="fas fa-users"></i>
+                        <span>Our Team</span>
+                    </a>
+                    <a href="#itineraries" class="nav-item">
+                        <i class="fas fa-route"></i>
+                        <span>Itineraries</span>
+                    </a>
+                    <a href="#contact" class="nav-item">
+                        <i class="fas fa-envelope"></i> 
+                        <span>Contact</span>
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero-section">
+        <div class="hero-background">
+            <div class="hero-overlay"></div>
+            <div id="threejs-background" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none;"></div>
+        </div>
+        
+        <div class="hero-content">
+            <div class="hero-badge">EXPERT GUIDED ADVENTURES</div>
+            <h1 class="hero-title">
+                <span class="title-line">Professional Tour Guides</span>
+                <span class="title-line highlight">for Small Group Adventure Trips</span>
+                <span class="title-line">in Central Asia</span>
+            </h1>
+            
+            <div class="hero-countries">
+                <span class="country-tag kyrgyzstan">
+                    <i class="fas fa-flag"></i>
+                    KYRGYZSTAN
+                </span>
+                <span class="country-tag tajikistan">
+                    <i class="fas fa-flag"></i>
+                    TAJIKISTAN
+                </span>
+                <span class="country-tag uzbekistan">
+                    <i class="fas fa-flag"></i>
+                    UZBEKISTAN
+                </span>
+            </div>
+            
+            <div class="hero-cta">
+                <a href="#team" class="btn-3d btn-primary">
+                    <i class="fas fa-users"></i>
+                    <span>Meet Our Expert Guides</span>
+                </a>
+                <a href="#itineraries" class="btn-3d btn-secondary">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <span>Explore Itineraries</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <div class="mouse-3d">
+                <div class="wheel"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="adventure-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Live Your Ultimate Adventure</h2>
+                <p class="section-subtitle">As professional tour guides, we specialize in organizing immersive experiential adventures that inspire, challenge, and reward you with unforgettable moments amid some of the world's most memorable outdoor and cultural landscapes.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="tours-section">
+        <div class="container">
+            <div class="tours-grid">
+                <div class="tour-card-3d">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="card-icon">
+                                <i class="fas fa-road"></i>
+                            </div>
+                            <h3 class="card-title">Epic Pamir Highway Tours</h3>
+                            <p class="card-text">We are the M41 experts. Our professional guides work with you to build an awesome itinerary that incorporates key destinations and reflects your adventurous spirit.</p>
+                        </div>
+                        <div class="card-back">
+                            <h4>Pamir Highway Features</h4>
+                            <ul>
+                                <li>Customized M41 itineraries</li>
+                                <li>Expert local guides</li>
+                                <li>Authentic experiences</li>
+                                <li>Flexible scheduling</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="tour-card-3d">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="card-icon">
+                                <i class="fas fa-hiking"></i>
+                            </div>
+                            <h3 class="card-title">Extraordinary Trekking Tours</h3>
+                            <p class="card-text">Take your Pamir explorations to the next level with our trekking tours. However remote or established the trail, our expert guides can get you to your jumping off point and be there for you when you walk out—safely and reliably!</p>
+                        </div>
+                        <div class="card-back">
+                            <h4>Trekking Features</h4>
+                            <ul>
+                                <li>Remote trail access</li>
+                                <li>Professional guides</li>
+                                <li>Safety protocols</li>
+                                <li>Reliable support</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+          
+                <div class="tour-card-3d">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="card-icon">
+                                <i class="fas fa-camera"></i>
+                            </div>
+                            <h3 class="card-title">Photography Tours</h3>
+                            <p class="card-text">Discover the beauty of the Pamirs through the lens on our photography tours. Capture elusive Marco Polo sheep and potentially even a snow leopard on an unforgettable journey into untouched wilderness, guided by professionals.</p>
+                        </div>
+                        <div class="card-back">
+                            <h4>Photography Features</h4>
+                            <ul>
+                                <li>Wildlife photography</li>
+                                <li>Scenic landscapes</li>
+                                <li>Professional guidance</li>
+                                <li>Unspoiled wilderness</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Images Captured by Our Guests</h2>
+                <p class="section-subtitle">Experience the Pamirs through the eyes of our adventurous travelers</p>
+            </div>
+            
+            <div class="gallery-3d">
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <div class="gallery-img-wrapper">
+                            <img src="http://m41travel.com/wp-content/uploads/2022/04/MG_9524.jpg" alt="Guest photo 1" class="gallery-img">
+                            <div class="gallery-overlay">
+                                <span>Guest Photo</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-img-wrapper">
+                            <img src="http://m41travel.com/wp-content/uploads/2022/04/MG_9460.jpg" alt="Guest photo 2" class="gallery-img">
+                            <div class="gallery-overlay">
+                                <span>Guest Photo</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-img-wrapper">
+                            <img src="http://m41travel.com/wp-content/uploads/2022/04/MG_9433.jpg" alt="Guest photo 3" class="gallery-img">
+                            <div class="gallery-overlay">
+                                <span>Guest Photo</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-img-wrapper">
+                            <img src="http://m41travel.com/wp-content/uploads/2022/04/MG_9573.jpg" alt="Guest photo 4" class="gallery-img">
+                            <div class="gallery-overlay">
+                                <span>Guest Photo</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-img-wrapper">
+                            <img src="http://m41travel.com/wp-content/uploads/2022/04/MG_0199.jpg" alt="Guest photo 5" class="gallery-img">
+                            <div class="gallery-overlay">
+                                <span>Guest Photo</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-img-wrapper">
+                            <img src="http://m41travel.com/wp-content/uploads/2022/04/MG_0174.jpg" alt="Guest photo 6" class="gallery-img">
+                            <div class="gallery-overlay">
+                                <span>Guest Photo</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="itineraries" class="itineraries-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Curated Itineraries</h2>
+                <p class="section-subtitle">Explore our top-rated itineraries or let our professional guides tailor them to suit your travel preferences. Not seeing something that fits your adventure style? Share your vision with us and we'll craft a custom trip to bring it to life.</p>
+            </div>
+            
+            <div class="itineraries-grid">
+
+                <div class="itinerary-card-3d">
+                    <div class="itinerary-header">
+                        <span class="itinerary-duration">6 DAYS</span>
+                        <span class="itinerary-price">$1,150</span>
+                    </div>
+                    <h3 class="itinerary-title">Via The Pamirs</h3>
+                    <div class="itinerary-content">
+                        <p>Explore the rugged beauty of the Pamir Mountains. Visit the Lenin base camp, Karakul lake, and Rangkul lake. Take in the stunning scenery of the Aq'Baital pass and the Shakhty colored paintings. Visit the beautiful Bulunkul and Yashilkul lakes, and take a hike up to Hausibeks view point to see the Kohi Pamir peak.</p>
+                        <div class="itinerary-highlights">
+                            <span><i class="fas fa-mountain"></i> Lenin Base Camp</span>
+                            <span><i class="fas fa-lake"></i> Karakul Lake</span>
+                            <span><i class="fas fa-hiking"></i> Hausibek Viewpoint</span>
+                        </div>
+                    </div>
+                    <a href="#contact" class="btn-itinerary">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>Contact Us</span>
+                    </a>
+                </div>
+      
+                <div class="itinerary-card-3d">
+                    <div class="itinerary-header">
+                        <span class="itinerary-duration">7 DAYS</span>
+                        <span class="itinerary-price">$2,036</span>
+                    </div>
+                    <h3 class="itinerary-title">Short Highland Tour</h3>
+                    <div class="itinerary-content">
+                        <p>Discover the "Roof of the World" on the Short Highland Tour in the Pamir mountains. Explore untouched nature, historical sights, and breathtaking views while interacting with the indigenous Pamiri people and nomadic Kyrgyz herders. Enjoy the fresh mountain air and the smells of Pamiri wilderness on this unforgettable adventure.</p>
+                        <div class="itinerary-highlights">
+                            <span><i class="fas fa-eye"></i> Breathtaking Views</span>
+                            <span><i class="fas fa-users"></i> Local Interactions</span>
+                            <span><i class="fas fa-tree"></i> Untouched Nature</span>
+                        </div>
+                    </div>
+                    <a href="#contact" class="btn-itinerary">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>Contact Us</span>
+                    </a>
+                </div>
+                
+                <div class="itinerary-card-3d">
+                    <div class="itinerary-header">
+                        <span class="itinerary-duration">20 DAYS</span>
+                        <span class="itinerary-price">$5,524</span>
+                    </div>
+                    <h3 class="itinerary-title">Extended Highland Tour</h3>
+                    <div class="itinerary-content">
+                        <p>Immerse yourself in the culture and traditional ways of life on the Extended Highland Tour in the Pamir mountains. Meet the indigenous people of the region and learn about their endangered languages. Visit ancient villages, verdant fields and orchards, and discover inspiring landscapes, high-altitude passes and ancient sites.</p>
+                        <div class="itinerary-highlights">
+                            <span><i class="fas fa-globe-asia"></i> Cultural Immersion</span>
+                            <span><i class="fas fa-language"></i> Indigenous Languages</span>
+                            <span><i class="fas fa-village"></i> Ancient Villages</span>
+                        </div>
+                    </div>
+                    <a href="#contact" class="btn-itinerary">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>Contact Us</span>
+                    </a>
+                </div>
+                
+                <div class="itinerary-card-3d">
+                    <div class="itinerary-header">
+                        <span class="itinerary-duration">15 DAYS</span>
+                        <span class="itinerary-price">CUSTOM</span>
+                    </div>
+                    <h3 class="itinerary-title">Pamir Trekking Rounding</h3>
+                    <div class="itinerary-content">
+                        <p>Challenge yourself and discover the beauty of the "Roof of the World." Embark on a 15-day trekking adventure in the stunning Pamir mountains. Explore the natural beauty and culture of the region while hiking through breathtaking landscapes and interacting with the indigenous people. Discover alpine lakes, snow-capped peaks, and remote valleys.</p>
+                        <div class="itinerary-highlights">
+                            <span><i class="fas fa-hiking"></i> Trekking Adventure</span>
+                            <span><i class="fas fa-peak"></i> Snow-Capped Peaks</span>
+                            <span><i class="fas fa-water"></i> Alpine Lakes</span>
+                        </div>
+                    </div>
+                    <a href="#contact" class="btn-itinerary">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>Contact Us</span>
+                    </a>
+                </div>
+                
+                <div class="itinerary-card-3d">
+                    <div class="itinerary-header">
+                        <span class="itinerary-duration">12 DAYS</span>
+                        <span class="itinerary-price">CUSTOM</span>
+                    </div>
+                    <h3 class="itinerary-title">Cultural Traverse Tour</h3>
+                    <div class="itinerary-content">
+                        <p>Explore the ancient Silk Road and civilizations on this multi-day tour. Visit historical fortresses, mysterious stone circles, petroglyphs, hot mineral springs, and a Buddhist monastery. Experience the local hospitality in the beautiful Pamir mountains and the cross-border market. Enjoy the spectacular scenery and trek to the Sarez lake, one of the highest in the world.</p>
+                        <div class="itinerary-highlights">
+                            <span><i class="fas fa-history"></i> Silk Road History</span>
+                            <span><i class="fas fa-spa"></i> Hot Springs</span>
+                            <span><i class="fas fa-monument"></i> Buddhist Monastery</span>
+                        </div>
+                    </div>
+                    <a href="#contact" class="btn-itinerary">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>Contact Us</span>
+                    </a>
+                </div>
+                
+                <div class="itinerary-card-3d">
+                    <div class="itinerary-header">
+                        <span class="itinerary-duration">15 DAYS</span>
+                        <span class="itinerary-price">CUSTOM</span>
+                    </div>
+                    <h3 class="itinerary-title">Alpen Lakes Tour</h3>
+                    <div class="itinerary-content">
+                        <p>Experience the beauty and culture of the Pamir mountain range on this multi-day Alpen Lakes tour. Explore untouched nature, historical sights and breathtaking views while interacting with indigenous Pamiri people. Enjoy hiking, wildlife viewing, yurt stays and homestays. Don't miss out on the chance to discover the "Roof of the World"!</p>
+                        <div class="itinerary-highlights">
+                            <span><i class="fas fa-lake"></i> Alpine Lakes</span>
+                            <span><i class="fas fa-campground"></i> Yurt Stays</span>
+                            <span><i class="fas fa-binoculars"></i> Wildlife Viewing</span>
+                        </div>
+                    </div>
+                    <a href="#contact" class="btn-itinerary">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>Contact Us</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pictures-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-subtitle">M41 TRAVEL EXPERIENCE</div>
+                <h2 class="section-title">Discover The Pamirs</h2>
+                <p class="section-subtitle">Immersive moments from our unforgettable journeys</p>
+            </div>
+            
+            <div class="pictures-grid-3d">
+                <div class="picture-item">
+                    <div class="picture-wrapper">
+                        <img src="http://m41travel.com/wp-content/uploads/2022/04/MG_9797-2.jpg" alt="Pamir Landscape" class="picture-img">
+                        <div class="picture-overlay">
+                            <span>The Pamir Mountains</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="picture-item">
+                    <div class="picture-wrapper">
+                        <img src="http://m41travel.com/wp-content/uploads/2022/04/MG_9828.jpg" alt="Mountain Adventure" class="picture-img">
+                        <div class="picture-overlay">
+                            <span>Mountain Adventure</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="picture-item">
+                    <div class="picture-wrapper">
+                        <img src="http://m41travel.com/wp-content/uploads/2022/04/MG_9911.jpg" alt="Scenic View" class="picture-img">
+                        <div class="picture-overlay">
+                            <span>Scenic Views</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="picture-item">
+                    <div class="picture-wrapper">
+                        <img src="http://m41travel.com/wp-content/uploads/2022/04/MG_0217-1.jpg" alt="Cultural Experience" class="picture-img">
+                        <div class="picture-overlay">
+                            <span>Cultural Experience</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="picture-item">
+                    <div class="picture-wrapper">
+                        <img src="http://m41travel.com/wp-content/uploads/2022/04/IMG_0239.jpg" alt="Local Life" class="picture-img">
+                        <div class="picture-overlay">
+                            <span>Local Life</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="picture-item">
+                    <div class="picture-wrapper">
+                        <img src="http://m41travel.com/wp-content/uploads/2022/04/MG_9717-1.jpg" alt="Wilderness" class="picture-img">
+                        <div class="picture-overlay">
+                            <span>Wilderness</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="team" class="team-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Professional Tour Guide Team</h2>
+                <p class="section-subtitle">m41 Travel is locally-owned and operated by our team of experienced Pamiri guides from Khorog, ensuring authentic and expert-led adventures.</p>
+            </div>
+            
+            <div class="team-grid">
+   
+                <div class="team-card-3d">
+                    <div class="team-img-container">
+                        <img src="http://m41travel.com/wp-content/uploads/2022/04/m41-travel-ibrohim_afzunov.jpg" alt="Ibrohim Afzunov" class="team-img">
+                        <div class="team-overlay">
+                            <div class="team-languages">
+                                <span>English</span>
+                                <span>Pamiri</span>
+                                <span>Tajik</span>
+                                <span>Russian</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <h3 class="team-name">Ibrohim Afzunov</h3>
+                        <p class="team-role">Founder, Lead Driver and Problem Solver</p>
+                        <p class="team-bio">Languages: English, Pamiri, Tajik, Russian</p>
+                    </div>
+                </div>
+                
+                <div class="team-card-3d">
+                    <div class="team-img-container">
+                        <img src="http://m41travel.com/wp-content/uploads/2022/04/m41-travel-shodi-afzunov-wilidlife-specialist.jpg" alt="Shodi Afzunov" class="team-img">
+                        <div class="team-overlay">
+                            <div class="team-languages">
+                                <span>English</span>
+                                <span>Pamiri</span>
+                                <span>Tajik</span>
+                                <span>Russian</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <h3 class="team-name">Shodi Afzunov</h3>
+                        <p class="team-role">Lead Wildlife Specialist</p>
+                        <p class="team-bio">Languages: English, Pamiri, Tajik, Russian</p>
+                    </div>
+                </div>
+                
+                <div class="team-card-3d">
+                    <div class="team-img-container">
+                        <img src="http://m41travel.com/wp-content/uploads/2022/04/m41-travel-kishvar-afzunov_riding-yak.jpg" alt="Kishvar Afzunov" class="team-img">
+                        <div class="team-overlay">
+                            <div class="team-languages">
+                                <span>English</span>
+                                <span>Pamiri</span>
+                                <span>Tajik</span>
+                                <span>Kyrgyz</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <h3 class="team-name">Kishvar Afzunov</h3>
+                        <p class="team-role">Driver and Badass Guide</p>
+                        <p class="team-bio">Languages: English, Pamiri, Tajik, Kyrgyz</p>
+                    </div>
+                </div>
+      
+                <div class="team-card-3d">
+                    <div class="team-img-container">
+                        <img src="http://m41travel.com/wp-content/uploads/2022/04/m41-travel-khudi-guide.jpg" alt="Khudi" class="team-img">
+                        <div class="team-overlay">
+                            <div class="team-languages">
+                                <span>Local Guide</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <h3 class="team-name">Khudi</h3>
+                        <p class="team-role">Guide</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Start Your Adventure Today</h2>
+                <p class="section-subtitle">Let us know which trip you want to join or about the custom itinerary you would like our professional guides to build!</p>
+            </div>
+            
+            <div class="contact-form-3d">
+                <form action="/submit-form" method="post">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <input type="text" id="first_name" name="first_name" required>
+                            <label for="first_name">First Name *</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="last_name" name="last_name">
+                            <label for="last_name">Last Name</label>
+                        </div>
+                        <div class="form-group full-width">
+                            <input type="email" id="email" name="email" required>
+                            <label for="email">Email *</label>
+                        </div>
+                        <div class="form-group full-width">
+                            <input type="number" id="num_travelers" name="num_travelers" min="1">
+                            <label for="num_travelers">Number of Travelers in Your Group</label>
+                        </div>
+                        <div class="form-group full-width">
+                            <textarea id="message" name="message" rows="5"></textarea>
+                            <label for="message">Tell us about your adventure vision</label>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn-submit-3d">
+                        <i class="fas fa-paper-plane"></i>
+                        <span>Submit Adventure Request</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+<section class="human-check-section">
+    <div class="container">
+        <div class="human-check-box">
+            <h3 class="human-check-title">
+                <i class="fas fa-shield-alt"></i>
+                Human Verification
+            </h3>
+            <p>Please verify you're human by selecting the adventure-related option below:</p>
+            
+            <div class="human-check-options">
+                <div class="human-check-option" onclick="selectOption(this)">
+                    <i class="fas fa-mountain"></i>
+                    Mountain
+                </div>
+                <div class="human-check-option" onclick="selectOption(this)">
+                    <i class="fas fa-car"></i>
+                    Car
+                </div>
+                <div class="human-check-option" onclick="selectOption(this)">
+                    <i class="fas fa-passport"></i>
+                    Passport
+                </div>
+                <div class="human-check-option" onclick="selectOption(this)">
+                    <i class="fas fa-hiking"></i>
+                    Trekking
+                </div>
+            </div>
+            
+            <button class="btn-3d btn-primary" onclick="verifyHuman()" style="width: auto;">
+                <i class="fas fa-check-circle"></i>
+                <span>Verify & Continue</span>
+            </button>
+            
+            <p class="human-check-note">This helps us prevent spam and ensure genuine adventure inquiries.</p>
+        </div>
+    </div>
+</section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="logo-3d">
+                        <span class="logo-front">M41</span>
+                        <span class="logo-back">Travel</span>
+                    </div>
+                    <p class="footer-tagline">Professional Tour Guides for Central Asia Adventures</p>
+                </div>
+                <div class="footer-info">
+                    <p class="copyright">Copyright © 2026 • m41 Travel LLC • Website by Randall Brown</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+let selectedOption = null;
+
+function selectOption(element) {
+    document.querySelectorAll('.human-check-option').forEach(opt => {
+        opt.classList.remove('selected');
+    });
+    
+    element.classList.add('selected');
+    selectedOption = element.textContent.trim();
+}
+
+function verifyHuman() {
+    if (!selectedOption) {
+        alert('Please select an option to verify you are human.');
+        return;
+    }
+    
+    if (selectedOption === 'Trekking' || selectedOption.includes('Trekking')) {
+        alert('✓ Verification successful! You are ready for adventure!');
+        document.querySelector('form').submit();
+    } else {
+        alert('Please select "Trekking" to verify you are a real adventure enthusiast!');
+    }
+}
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+            window.scrollTo({
+                top: targetElement.offsetTop - 80,
+                behavior: 'smooth'
+            });
+        }
+    });
+});
+
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('fade-in-up');
+        }
+    });
+}, observerOptions);
+
+document.querySelectorAll('section, .tour-card-3d, .team-card-3d, .itinerary-card-3d').forEach(el => {
+    observer.observe(el);
+});
+</script>
+
+</body>
+</html>
