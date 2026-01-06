@@ -691,7 +691,6 @@
  .team-section {
      background: var(--gradient-section);
      position: relative;
-     
  }
 
  .tours-section::before,
@@ -731,6 +730,7 @@
      height: 520px;
      perspective: 1500px;
      transform-style: preserve-3d;
+     width: 100%;
  }
 
  .card-inner {
