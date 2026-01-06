@@ -959,7 +959,7 @@ section {
 .itineraries-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-    gap: 2.5rem;
+    gap: 1.5rem;
 }
 
 .itinerary-card-3d {
