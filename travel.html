@@ -1,50 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-    <!-- Add this inside the <head> section -->
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-<!-- Add mobile menu button in the header -->
-<header class="header">
-    <div class="container">
-        <div class="logo-container">
-            <div class="logo-3d">
-                <span class="logo-front">M41</span>
-                <span class="logo-back">Travel</span>
-            </div>
-            <div class="logo-subtitle">Professional Central Asia Tours</div>
-        </div>
-        
-        <!-- Mobile menu toggle button -->
-        <button class="mobile-menu-toggle" id="mobileMenuToggle">
-            <i class="fas fa-bars"></i>
-        </button>
-        
-        <nav class="nav-3d" id="mainNav">
-            <div class="nav-inner">
-                <a href="#home" class="nav-item">
-                    <i class="fas fa-compass"></i>
-                    <span>Home</span>
-                </a>
-                <a href="#team" class="nav-item">
-                    <i class="fas fa-users"></i>
-                    <span>Our Team</span>
-                </a>
-                <a href="#itineraries" class="nav-item">
-                    <i class="fas fa-route"></i>
-                    <span>Itineraries</span>
-                </a>
-                <a href="#contact" class="nav-item">
-                    <i class="fas fa-envelope"></i> 
-                    <span>Contact</span>
-                </a>
-            </div>
-        </nav>
-    </div>
-</header>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>M41 Travel | Professional Adventure Tours in Central Asia</title>
@@ -65,7 +21,14 @@
                 <div class="logo-subtitle">Professional Central Asia Tours</div>
             </div>
             
-            <nav class="nav-3d">
+            <!-- Mobile hamburger menu -->
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle navigation menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            
+            <nav class="nav-3d" id="mainNav">
                 <div class="nav-inner">
                     <a href="#home" class="nav-item">
                         <i class="fas fa-compass"></i>
@@ -630,40 +593,6 @@
         </div>
     </footer>
 
-    <script>
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href');
-        if (targetId === '#') return;
-        
-        const targetElement = document.querySelector(targetId);
-        if (targetElement) {
-            window.scrollTo({
-                top: targetElement.offsetTop - 80,
-                behavior: 'smooth'
-            });
-        }
-    });
-});
-
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('fade-in-up');
-        }
-    });
-}, observerOptions);
-
-document.querySelectorAll('section, .tour-card-3d, .team-card-3d, .itinerary-card-3d').forEach(el => {
-    observer.observe(el);
-});
-</script>
-
+    <script src="travel.js"></script>
 </body>
 </html>
