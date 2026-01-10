@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
     <header class="header">
@@ -517,7 +518,7 @@
             </div>
             
             <div class="contact-form-3d">
-                <form action="/submit-form" method="post">
+                <form action="/submit-form" method="post" id="adventureForm">
                     <div class="form-grid">
                         <div class="form-group">
                             <input type="text" id="first_name" name="first_name" required>
@@ -540,6 +541,7 @@
                             <label for="message">Tell us about your adventure vision</label>
                         </div>
                     </div>
+
                     <button type="submit" class="btn-submit-3d">
                         <i class="fas fa-paper-plane"></i>
                         <span>Submit Adventure Request</span>
@@ -549,43 +551,23 @@
         </div>
     </section>
 
-<section class="human-check-section">
-    <div class="container">
-        <div class="human-check-box">
-            <h3 class="human-check-title">
-                <i class="fas fa-shield-alt"></i>
-                Human Verification
-            </h3>
-            <p>Please verify you're human by selecting the adventure-related option below:</p>
-            
-            <div class="human-check-options">
-                <div class="human-check-option" onclick="selectOption(this)">
-                    <i class="fas fa-mountain"></i>
-                    Mountain
-                </div>
-                <div class="human-check-option" onclick="selectOption(this)">
-                    <i class="fas fa-car"></i>
-                    Car
-                </div>
-                <div class="human-check-option" onclick="selectOption(this)">
-                    <i class="fas fa-passport"></i>
-                    Passport
-                </div>
-                <div class="human-check-option" onclick="selectOption(this)">
-                    <i class="fas fa-hiking"></i>
-                    Trekking
+
+
+    <section class="human-check-section" style="padding: 40px 0; background-color: #f8f9fa;">
+        <div class="container" style="text-align: center;">
+            <div class="human-check-box" style="display: inline-block; padding: 30px; background: white; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                <h3 class="human-check-title" style="margin-bottom: 20px; color: #2c3e50;">
+                    <i class="fas fa-shield-alt"></i>
+                    Human Verification
+                </h3>
+                <p style="margin-bottom: 20px; color: #7f8c8d;">Please verify you're human to continue:</p>
+                
+                <div style="display: flex; justify-content: center; margin-bottom: 10px;">
+                    <div class="g-recaptcha" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"></div>
                 </div>
             </div>
-            
-            <button class="btn-3d btn-primary" onclick="verifyHuman()" style="width: auto;">
-                <i class="fas fa-check-circle"></i>
-                <span>Verify & Continue</span>
-            </button>
-            
-            <p class="human-check-note">This helps us prevent spam and ensure genuine adventure inquiries.</p>
         </div>
-    </div>
-</section>
+    </section>
 
     <footer class="footer">
         <div class="container">
@@ -605,30 +587,6 @@
     </footer>
 
     <script>
-let selectedOption = null;
-
-function selectOption(element) {
-    document.querySelectorAll('.human-check-option').forEach(opt => {
-        opt.classList.remove('selected');
-    });
-    
-    element.classList.add('selected');
-    selectedOption = element.textContent.trim();
-}
-
-function verifyHuman() {
-    if (!selectedOption) {
-        alert('Please select an option to verify you are human.');
-        return;
-    }
-    
-    if (selectedOption === 'Trekking' || selectedOption.includes('Trekking')) {
-        alert('✓ Verification successful! You are ready for adventure!');
-        document.querySelector('form').submit();
-    } else {
-        alert('Please select "Trekking" to verify you are a real adventure enthusiast!');
-    }
-}
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
