@@ -63,6 +63,7 @@ h2 {
     margin-bottom: 1.5rem;
     background: var(--gradient-gold);
     -webkit-background-clip: text;
+    -moz-background-clip: text;
     background-clip: text;
     color: transparent;
     position: relative;
@@ -175,6 +176,8 @@ h2 {
     position: relative;
     overflow: hidden;
     font-weight: 600;
+    min-width: 120px; /* Ensure touch-friendly size */
+    justify-content: center;
 }
 
 .nav-item::before {
@@ -227,7 +230,7 @@ h2 {
     height: 100%;
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
+    background-attachment: scroll; /* Changed from fixed for better mobile perf */
     z-index: -2;
     background-image: url('images/m4-travel-jarty-gumbez.jpg');
 }
@@ -286,6 +289,7 @@ h2 {
     border: 2px solid rgba(255, 255, 255, 0.2);
     position: relative;
     overflow: hidden;
+    min-height: 48px; /* Touch-friendly */
 }
 
 .hero-badge::before {
@@ -327,7 +331,6 @@ h2 {
 .title-line {
     display: block;
     margin-bottom: 0.5rem;
-    font-size: 30px;
 }
 
 .highlight {
@@ -383,6 +386,7 @@ h2 {
     justify-content: center;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     border: 2px solid rgba(255, 255, 255, 0.3);
+    min-height: 48px; /* Touch-friendly */
 }
 
 .country-tag::before {
@@ -419,11 +423,6 @@ h2 {
     color: white;
     position: relative;
 }
-
-
-
-/* Star removed as requested */
-/* .kyrgyzstan::after { ... } */
 
 .tajikistan {
     background: linear-gradient(135deg,
@@ -491,6 +490,7 @@ h2 {
     transform-style: preserve-3d;
     perspective: 500px;
     border: 2px solid transparent;
+    min-height: 48px; /* Touch-friendly */
 }
 
 .btn-3d::before {
@@ -716,12 +716,12 @@ section {
 
 .tours-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 3rem;
 }
 
 .tour-card-3d {
-    height: 520px;
+    height: auto; /* Changed to auto for flow */
     perspective: 1500px;
     transform-style: preserve-3d;
     width: 100%;
@@ -773,6 +773,7 @@ section {
     font-size: 4rem;
     background: var(--gradient-gold);
     -webkit-background-clip: text;
+    -moz-background-clip: text;
     background-clip: text;
     color: transparent;
     margin-bottom: 2rem;
@@ -870,6 +871,7 @@ section {
 .gallery-section .section-title {
     background: linear-gradient(135deg, #ffffff 0%, var(--accent-gold) 100%);
     -webkit-background-clip: text;
+    -moz-background-clip: text;
     background-clip: text;
     color: transparent;
 }
@@ -889,7 +891,7 @@ section {
 }
 
 .gallery-item {
-    height: 280px;
+    height: auto; /* Changed to auto */
     perspective: 1500px;
     transform-style: preserve-3d;
 }
@@ -897,12 +899,12 @@ section {
 .gallery-img-wrapper {
     position: relative;
     width: 100%;
-    height: 100%;
     transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     transform-style: preserve-3d;
     border-radius: 20px;
     overflow: hidden;
     border: 3px solid rgba(212, 175, 55, 0.3);
+    aspect-ratio: 16 / 9;
 }
 
 .gallery-item:hover .gallery-img-wrapper {
@@ -916,7 +918,7 @@ section {
 
 .gallery-img {
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: cover;
     transition: all 0.6s;
 }
@@ -949,7 +951,7 @@ section {
 
 .itineraries-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1.5rem;
 }
 
@@ -962,6 +964,7 @@ section {
     position: relative;
     overflow: hidden;
     border: 2px solid rgba(212, 175, 55, 0.1);
+    height: auto; /* Allow flow */
 }
 
 .itinerary-card-3d::before {
@@ -1087,6 +1090,7 @@ section {
     box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2);
     position: relative;
     overflow: hidden;
+    min-height: 48px; /* Touch-friendly */
 }
 
 .btn-itinerary::before {
@@ -1159,7 +1163,7 @@ section {
 }
 
 .picture-item {
-    height: 320px;
+    height: auto; /* Changed to auto */
     perspective: 1500px;
     transform-style: preserve-3d;
 }
@@ -1167,13 +1171,13 @@ section {
 .picture-wrapper {
     position: relative;
     width: 100%;
-    height: 100%;
     transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     transform-style: preserve-3d;
     border-radius: 20px;
     overflow: hidden;
     border: 3px solid rgba(212, 175, 55, 0.2);
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    aspect-ratio: 16 / 9;
 }
 
 .picture-item:hover .picture-wrapper {
@@ -1187,7 +1191,7 @@ section {
 
 .picture-img {
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: cover;
     transition: all 0.6s;
 }
@@ -1234,6 +1238,7 @@ section {
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     position: relative;
     border: 2px solid rgba(212, 175, 55, 0.1);
+    height: auto; /* Allow flow */
 }
 
 .team-card-3d:hover {
@@ -1246,14 +1251,15 @@ section {
 }
 
 .team-img-container {
-    height: 280px;
+    height: auto;
     position: relative;
     overflow: hidden;
+    aspect-ratio: 1 / 1;
 }
 
 .team-img {
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: cover;
     transition: transform 0.6s;
 }
@@ -1411,6 +1417,7 @@ section {
     background: rgba(255, 255, 255, 0.9);
     transition: all 0.4s;
     font-family: 'Open Sans', sans-serif;
+    min-height: 48px; /* Touch-friendly inputs */
 }
 
 .form-group select {
@@ -1463,10 +1470,8 @@ section {
     margin: 2rem 0;
     position: relative;
     background-color: #f8f9fa;
-    /* From inline style */
 }
 
-/* Background pattern */
 .human-check-section::before {
     content: '';
     position: absolute;
@@ -1484,7 +1489,6 @@ section {
     position: relative;
     z-index: 2;
     text-align: center;
-    /* Center content */
 }
 
 .human-check-box {
@@ -1493,17 +1497,11 @@ section {
     padding: 3rem;
     text-align: center;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    /* From inline style */
     border: 2px solid rgba(212, 175, 55, 0.1);
-    /* Subtle border */
     max-width: 600px;
-    /* Limit width */
     margin: 0 auto;
-    /* Center horizontally */
     display: inline-block;
-    /* Or inline-block if we want wrapper centering */
     width: 100%;
-    /* Be full width up to max-width */
 }
 
 .human-check-title {
@@ -1558,6 +1556,7 @@ section {
         0 5px 20px rgba(0, 0, 0, 0.1),
         inset 0 2px 0 rgba(255, 255, 255, 0.4);
     border: 3px solid rgba(255, 255, 255, 0.4);
+    min-height: 48px; /* Touch-friendly */
 }
 
 .btn-submit-3d::before {
@@ -1671,6 +1670,9 @@ section {
     transition: all 0.3s;
     position: relative;
     padding: 0.5rem 0;
+    min-height: 48px; /* Touch-friendly */
+    display: flex;
+    align-items: center;
 }
 
 .footer-link::after {
@@ -1842,18 +1844,15 @@ section {
 
     .human-check-box {
         padding: 1.5rem;
-        /* Even less padding for small screens */
         width: 100%;
         max-width: 100%;
         margin: 0;
         box-shadow: none;
-        /* Simplify on mobile */
         border: 1px solid #eee;
     }
 
     .human-check-section .container {
         padding: 0 1rem;
-        /* Ensure container doesn't squeeze too much */
     }
 
     .human-check-title {
@@ -1867,6 +1866,24 @@ section {
 
     .contact-form-3d {
         padding: 2.5rem 2rem;
+    }
+
+    /* Disable heavy 3D effects on mobile for perf */
+    .tour-card-3d:hover .card-inner {
+        transform: none;
+    }
+
+    .gallery-item:hover .gallery-img-wrapper,
+    .picture-item:hover .picture-wrapper {
+        transform: scale(1.05);
+    }
+
+    .team-card-3d:hover {
+        transform: translateY(-10px) scale(1.02);
+    }
+
+    .contact-form-3d:hover {
+        transform: translateY(-5px);
     }
 }
 
@@ -1912,26 +1929,167 @@ section {
         gap: 2rem;
     }
 
-    .tour-card-3d,
-    .itinerary-card-3d {
-        height: auto;
-        min-height: 380px;
-    }
-
     .card-front,
     .card-back {
         padding: 2rem;
     }
-
-    .card-front,
-    .card-back {
-        padding: 2rem;
-    }
-
-    /* Old options grid removed */
 
     .footer {
         padding: 3rem 0 2rem;
+    }
+
+    .gallery-grid,
+    .pictures-grid-3d {
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content {
+        padding: 40px 20px;
+    }
+
+    .section-header {
+        margin-bottom: 3rem;
+    }
+
+    .nav-inner {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
+    .nav-item {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
+
+    .logo-front {
+        font-size: 2rem;
+    }
+
+    .logo-back {
+        font-size: 1.4rem;
+    }
+
+    .country-tag {
+        min-width: auto;
+        padding: 0.8rem 1.5rem;
+        font-size: 0.8rem;
+    }
+
+    .btn-3d {
+        padding: 1rem 2rem;
+        font-size: 1rem;
+        min-width: auto;
+    }
+
+    .card-title {
+        font-size: 1.6rem;
+    }
+
+    .card-icon {
+        font-size: 3rem;
+    }
+
+    .team-name {
+        font-size: 1.4rem;
+    }
+
+    .team-role {
+        font-size: 1rem;
+    }
+
+    .contact-form-3d {
+        padding: 2rem 1.5rem;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+        font-size: 1rem;
+        padding: 1rem;
+    }
+
+    .form-group label {
+        font-size: 1rem;
+    }
+
+    .human-check-box {
+        padding: 2rem 1.5rem;
+    }
+
+    .footer-content {
+        gap: 2rem;
+    }
+
+    .footer-tagline {
+        font-size: 1rem;
+    }
+
+    .copyright {
+        font-size: 0.85rem;
+    }
+
+    .footer-social a {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+
+    /* Extra small screen optimizations */
+    .hero-section {
+        padding-top: 60px;
+    }
+
+    .scroll-indicator {
+        bottom: 1.5rem;
+    }
+
+    .adventure-section {
+        padding: 6rem 0;
+    }
+}
+
+@media (max-width: 400px) {
+    /* For very small phones (e.g., iPhone 5/SE) */
+    .container {
+        padding: 0 1rem;
+    }
+
+    .hero-title {
+        font-size: 1.8rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .nav-item {
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
+    }
+
+    .btn-3d {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    .card-title {
+        font-size: 1.4rem;
+    }
+
+    .itinerary-title {
+        font-size: 1.4rem;
+    }
+
+    .human-check-title {
+        font-size: 1.2rem;
+    }
+
+    .btn-submit-3d {
+        font-size: 1rem;
+        padding: 1rem;
     }
 }
 
