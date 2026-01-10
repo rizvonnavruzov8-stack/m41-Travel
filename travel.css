@@ -63,7 +63,6 @@ h2 {
     margin-bottom: 1.5rem;
     background: var(--gradient-gold);
     -webkit-background-clip: text;
-    -moz-background-clip: text;
     background-clip: text;
     color: transparent;
     position: relative;
@@ -176,8 +175,6 @@ h2 {
     position: relative;
     overflow: hidden;
     font-weight: 600;
-    min-width: 120px; /* Ensure touch-friendly size */
-    justify-content: center;
 }
 
 .nav-item::before {
@@ -230,7 +227,7 @@ h2 {
     height: 100%;
     background-size: cover;
     background-position: center;
-    background-attachment: scroll; /* Changed from fixed for better mobile perf */
+    background-attachment: fixed;
     z-index: -2;
     background-image: url('images/m4-travel-jarty-gumbez.jpg');
 }
@@ -289,7 +286,6 @@ h2 {
     border: 2px solid rgba(255, 255, 255, 0.2);
     position: relative;
     overflow: hidden;
-    min-height: 48px; /* Touch-friendly */
 }
 
 .hero-badge::before {
@@ -331,6 +327,7 @@ h2 {
 .title-line {
     display: block;
     margin-bottom: 0.5rem;
+    font-size: 30px;
 }
 
 .highlight {
@@ -386,7 +383,6 @@ h2 {
     justify-content: center;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     border: 2px solid rgba(255, 255, 255, 0.3);
-    min-height: 48px; /* Touch-friendly */
 }
 
 .country-tag::before {
@@ -423,6 +419,11 @@ h2 {
     color: white;
     position: relative;
 }
+
+
+
+/* Star removed as requested */
+/* .kyrgyzstan::after { ... } */
 
 .tajikistan {
     background: linear-gradient(135deg,
@@ -490,7 +491,6 @@ h2 {
     transform-style: preserve-3d;
     perspective: 500px;
     border: 2px solid transparent;
-    min-height: 48px; /* Touch-friendly */
 }
 
 .btn-3d::before {
@@ -716,12 +716,12 @@ section {
 
 .tours-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
     gap: 3rem;
 }
 
 .tour-card-3d {
-    height: auto; /* Changed to auto for flow */
+    height: 520px;
     perspective: 1500px;
     transform-style: preserve-3d;
     width: 100%;
@@ -773,7 +773,6 @@ section {
     font-size: 4rem;
     background: var(--gradient-gold);
     -webkit-background-clip: text;
-    -moz-background-clip: text;
     background-clip: text;
     color: transparent;
     margin-bottom: 2rem;
@@ -871,7 +870,6 @@ section {
 .gallery-section .section-title {
     background: linear-gradient(135deg, #ffffff 0%, var(--accent-gold) 100%);
     -webkit-background-clip: text;
-    -moz-background-clip: text;
     background-clip: text;
     color: transparent;
 }
@@ -891,7 +889,7 @@ section {
 }
 
 .gallery-item {
-    height: auto; /* Changed to auto */
+    height: 280px;
     perspective: 1500px;
     transform-style: preserve-3d;
 }
@@ -899,12 +897,12 @@ section {
 .gallery-img-wrapper {
     position: relative;
     width: 100%;
+    height: 100%;
     transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     transform-style: preserve-3d;
     border-radius: 20px;
     overflow: hidden;
     border: 3px solid rgba(212, 175, 55, 0.3);
-    aspect-ratio: 16 / 9;
 }
 
 .gallery-item:hover .gallery-img-wrapper {
@@ -918,7 +916,7 @@ section {
 
 .gallery-img {
     width: 100%;
-    height: auto;
+    height: 100%;
     object-fit: cover;
     transition: all 0.6s;
 }
@@ -951,7 +949,7 @@ section {
 
 .itineraries-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
     gap: 1.5rem;
 }
 
@@ -964,7 +962,6 @@ section {
     position: relative;
     overflow: hidden;
     border: 2px solid rgba(212, 175, 55, 0.1);
-    height: auto; /* Allow flow */
 }
 
 .itinerary-card-3d::before {
@@ -1090,7 +1087,6 @@ section {
     box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2);
     position: relative;
     overflow: hidden;
-    min-height: 48px; /* Touch-friendly */
 }
 
 .btn-itinerary::before {
@@ -1163,7 +1159,7 @@ section {
 }
 
 .picture-item {
-    height: auto; /* Changed to auto */
+    height: 320px;
     perspective: 1500px;
     transform-style: preserve-3d;
 }
@@ -1171,13 +1167,13 @@ section {
 .picture-wrapper {
     position: relative;
     width: 100%;
+    height: 100%;
     transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     transform-style: preserve-3d;
     border-radius: 20px;
     overflow: hidden;
     border: 3px solid rgba(212, 175, 55, 0.2);
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-    aspect-ratio: 16 / 9;
 }
 
 .picture-item:hover .picture-wrapper {
@@ -1191,7 +1187,7 @@ section {
 
 .picture-img {
     width: 100%;
-    height: auto;
+    height: 100%;
     object-fit: cover;
     transition: all 0.6s;
 }
@@ -1238,7 +1234,6 @@ section {
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     position: relative;
     border: 2px solid rgba(212, 175, 55, 0.1);
-    height: auto; /* Allow flow */
 }
 
 .team-card-3d:hover {
@@ -1251,15 +1246,14 @@ section {
 }
 
 .team-img-container {
-    height: auto;
+    height: 280px;
     position: relative;
     overflow: hidden;
-    aspect-ratio: 1 / 1;
 }
 
 .team-img {
     width: 100%;
-    height: auto;
+    height: 100%;
     object-fit: cover;
     transition: transform 0.6s;
 }
@@ -1417,7 +1411,6 @@ section {
     background: rgba(255, 255, 255, 0.9);
     transition: all 0.4s;
     font-family: 'Open Sans', sans-serif;
-    min-height: 48px; /* Touch-friendly inputs */
 }
 
 .form-group select {
@@ -1470,8 +1463,10 @@ section {
     margin: 2rem 0;
     position: relative;
     background-color: #f8f9fa;
+    /* From inline style */
 }
 
+/* Background pattern */
 .human-check-section::before {
     content: '';
     position: absolute;
@@ -1489,6 +1484,7 @@ section {
     position: relative;
     z-index: 2;
     text-align: center;
+    /* Center content */
 }
 
 .human-check-box {
@@ -1497,11 +1493,17 @@ section {
     padding: 3rem;
     text-align: center;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    /* From inline style */
     border: 2px solid rgba(212, 175, 55, 0.1);
+    /* Subtle border */
     max-width: 600px;
+    /* Limit width */
     margin: 0 auto;
+    /* Center horizontally */
     display: inline-block;
+    /* Or inline-block if we want wrapper centering */
     width: 100%;
+    /* Be full width up to max-width */
 }
 
 .human-check-title {
@@ -1556,7 +1558,6 @@ section {
         0 5px 20px rgba(0, 0, 0, 0.1),
         inset 0 2px 0 rgba(255, 255, 255, 0.4);
     border: 3px solid rgba(255, 255, 255, 0.4);
-    min-height: 48px; /* Touch-friendly */
 }
 
 .btn-submit-3d::before {
@@ -1670,9 +1671,6 @@ section {
     transition: all 0.3s;
     position: relative;
     padding: 0.5rem 0;
-    min-height: 48px; /* Touch-friendly */
-    display: flex;
-    align-items: center;
 }
 
 .footer-link::after {
@@ -1738,110 +1736,295 @@ section {
     border-color: var(--accent-gold);
 }
 
+@/* ==================== RESPONSIVE STYLES ==================== */
+
+/* Large Tablets and Small Laptops */
 @media (max-width: 1200px) {
     .container {
         padding: 0 2rem;
+        max-width: 95%;
     }
-
-    .hero-title {
-        font-size: 3.5rem;
-    }
-
-    .tours-grid,
-    .itineraries-grid,
-    .team-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .pictures-section::before {
-        font-size: 8rem;
-        letter-spacing: 1rem;
-    }
-}
-
-@media (max-width: 992px) {
+    
     .hero-title {
         font-size: 3rem;
     }
-
+    
+    .title-line {
+        font-size: 2.8rem;
+    }
+    
     .section-title {
         font-size: 2.5rem;
     }
-
+    
+    .tours-grid,
+    .itineraries-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+    
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .gallery-grid,
+    .pictures-grid-3d {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .pictures-section::before {
+        font-size: 6rem;
+        letter-spacing: 0.8rem;
+    }
+    
     .footer-content {
         grid-template-columns: 1fr;
         text-align: center;
-        gap: 3rem;
+        gap: 2rem;
     }
-
+    
     .footer-logo {
         align-items: center;
     }
-
+    
     .footer-info {
         text-align: center;
     }
-
-    .footer-links {
-        justify-content: center;
-    }
-
-    .footer-social {
-        justify-content: center;
-    }
 }
 
-@media (max-width: 768px) {
-    .header .container {
-        flex-direction: column;
-        gap: 1.5rem;
-    }
-
+/* Tablets */
+@media (max-width: 992px) {
     .hero-title {
         font-size: 2.5rem;
     }
-
+    
+    .title-line {
+        font-size: 2.3rem;
+    }
+    
+    .hero-content {
+        padding: 4rem 2rem;
+    }
+    
     .hero-badge {
         font-size: 0.85rem;
         padding: 0.7rem 1.5rem;
     }
-
+    
+    .section-title {
+        font-size: 2.2rem;
+    }
+    
+    .section-subtitle {
+        font-size: 1.1rem;
+        padding: 0 1rem;
+    }
+    
+    .adventure-section .section-subtitle {
+        font-size: 1.1rem;
+        padding: 1.5rem;
+    }
+    
+    .nav-inner {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: rgba(10, 25, 47, 0.98);
+        backdrop-filter: blur(15px);
+        flex-direction: column;
+        padding: 1rem;
+        border-radius: 0 0 20px 20px;
+        border-top: 1px solid rgba(212, 175, 55, 0.3);
+    }
+    
+    .nav-inner.active {
+        display: flex;
+    }
+    
+    .nav-item {
+        justify-content: center;
+        border-radius: 10px;
+        margin: 0.5rem 0;
+    }
+    
+    .mobile-menu-toggle {
+        display: block;
+        background: transparent;
+        border: 2px solid var(--accent-gold);
+        color: var(--accent-gold);
+        width: 50px;
+        height: 50px;
+        border-radius: 10px;
+        font-size: 1.5rem;
+        cursor: pointer;
+        transition: all 0.3s;
+    }
+    
+    .mobile-menu-toggle:hover {
+        background: rgba(212, 175, 55, 0.1);
+    }
+    
     .hero-countries {
         flex-direction: column;
         align-items: center;
+        gap: 1rem;
     }
-
+    
     .country-tag {
         width: 100%;
         max-width: 300px;
+        min-width: auto;
+        justify-content: center;
     }
-
+    
     .hero-cta {
         flex-direction: column;
         align-items: center;
+        gap: 1.5rem;
     }
-
+    
     .btn-3d {
         width: 100%;
         max-width: 300px;
+        min-width: auto;
     }
+    
+    .form-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .form-group.full-width {
+        grid-column: 1;
+    }
+    
+    .contact-form-3d {
+        padding: 2.5rem;
+    }
+}
 
+/* Mobile Phones (Large) */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 1.5rem;
+    }
+    
+    .header .container {
+        padding: 0 1.5rem;
+        flex-wrap: wrap;
+    }
+    
+    .hero-section {
+        padding-top: 100px;
+        min-height: auto;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .title-line {
+        font-size: 1.8rem;
+        margin-bottom: 0.3rem;
+    }
+    
+    .hero-badge {
+        font-size: 0.8rem;
+        padding: 0.6rem 1.2rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+    
+    .section-subtitle {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+    
+    section {
+        padding: 4rem 0;
+    }
+    
     .tours-grid,
     .itineraries-grid,
     .team-grid,
     .gallery-grid,
     .pictures-grid-3d {
         grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
-
-    .form-grid {
-        grid-template-columns: 1fr;
+    
+    .tour-card-3d {
+        height: auto;
+        min-height: 400px;
     }
-
-    .form-group.full-width {
-        grid-column: span 1;
+    
+    .card-front,
+    .card-back {
+        padding: 2rem 1.5rem;
     }
-
+    
+    .card-title {
+        font-size: 1.5rem;
+    }
+    
+    .card-text {
+        font-size: 1rem;
+    }
+    
+    .itinerary-card-3d {
+        padding: 1.5rem;
+    }
+    
+    .itinerary-title {
+        font-size: 1.5rem;
+    }
+    
+    .itinerary-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    
+    .itinerary-price {
+        font-size: 1.5rem;
+    }
+    
+    .itinerary-highlights {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+    
+    .itinerary-highlights span {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .pictures-section::before {
+        font-size: 3rem;
+        letter-spacing: 0.3rem;
+        word-wrap: break-word;
+        white-space: normal;
+        padding: 0 1rem;
+        text-align: center;
+    }
+    
+    .team-card-3d {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    
+    .gallery-item,
+    .picture-item {
+        height: 250px;
+    }
+    
     .human-check-box {
         padding: 1.5rem;
         width: 100%;
@@ -1850,293 +2033,452 @@ section {
         box-shadow: none;
         border: 1px solid #eee;
     }
+    
+    .human-check-title {
+        font-size: 1.3rem;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .btn-submit-3d {
+        padding: 1rem 1.5rem;
+        font-size: 1.1rem;
+    }
+    
+    .footer {
+        padding: 3rem 0 2rem;
+    }
+    
+    .footer-content {
+        gap: 1.5rem;
+    }
+    
+    .footer-tagline {
+        font-size: 1rem;
+        text-align: center;
+    }
+}
 
-    .human-check-section .container {
+/* Small Mobile Phones */
+@media (max-width: 576px) {
+    .container {
         padding: 0 1rem;
     }
-
-    .human-check-title {
+    
+    .header .container {
+        padding: 0 1rem;
+    }
+    
+    .logo-front {
+        font-size: 2rem;
+    }
+    
+    .logo-back {
+        font-size: 1.3rem;
+    }
+    
+    .logo-subtitle {
+        font-size: 0.7rem;
+        letter-spacing: 1px;
+    }
+    
+    .hero-title {
+        font-size: 1.6rem;
+    }
+    
+    .title-line {
+        font-size: 1.4rem;
+    }
+    
+    .hero-content {
+        padding: 3rem 1rem;
+    }
+    
+    .hero-badge {
+        font-size: 0.7rem;
+        padding: 0.5rem 1rem;
+        letter-spacing: 1px;
+    }
+    
+    .section-title {
         font-size: 1.5rem;
     }
-
-    .pictures-section::before {
-        font-size: 4rem;
-        letter-spacing: 0.5rem;
+    
+    .section-header {
+        margin-bottom: 3rem;
     }
-
+    
+    .section-subtitle {
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+    
+    .adventure-section .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .adventure-section .section-subtitle {
+        font-size: 1rem;
+        padding: 1rem;
+        margin: 0;
+    }
+    
+    .country-tag {
+        padding: 0.8rem 1rem;
+        font-size: 0.8rem;
+        min-width: 200px;
+    }
+    
+    .btn-3d {
+        padding: 1rem 1.5rem;
+        font-size: 1rem;
+        min-width: 200px;
+    }
+    
+    .btn-3d i {
+        font-size: 1rem;
+    }
+    
+    .btn-3d span {
+        font-size: 0.9rem;
+    }
+    
+    .card-icon {
+        font-size: 3rem;
+    }
+    
+    .tour-card-3d {
+        min-height: 350px;
+    }
+    
+    .card-front,
+    .card-back {
+        padding: 1.5rem 1rem;
+    }
+    
     .contact-form-3d {
-        padding: 2.5rem 2rem;
+        padding: 1.5rem;
+        border-radius: 20px;
     }
-
-    /* Disable heavy 3D effects on mobile for perf */
-    .tour-card-3d:hover .card-inner {
-        transform: none;
+    
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+        padding: 1rem;
+        font-size: 1rem;
     }
-
-    .gallery-item:hover .gallery-img-wrapper,
-    .picture-item:hover .picture-wrapper {
-        transform: scale(1.05);
+    
+    .form-group label {
+        font-size: 1rem;
+        top: 1rem;
+        left: 1rem;
     }
-
-    .team-card-3d:hover {
-        transform: translateY(-10px) scale(1.02);
+    
+    .btn-itinerary {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
     }
+    
+    .gallery-item,
+    .picture-item {
+        height: 200px;
+    }
+    
+    .gallery-overlay,
+    .picture-overlay {
+        padding: 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .team-card-3d {
+        max-width: 100%;
+    }
+    
+    .team-name {
+        font-size: 1.3rem;
+    }
+    
+    .team-role {
+        font-size: 1rem;
+    }
+    
+    .human-check-box {
+        padding: 1rem;
+    }
+    
+    .human-check-title {
+        font-size: 1.1rem;
+    }
+    
+    .recaptcha-wrapper {
+        transform: scale(0.9);
+        transform-origin: center;
+    }
+    
+    .mouse-3d {
+        width: 25px;
+        height: 45px;
+    }
+    
+    .wheel {
+        width: 4px;
+        height: 10px;
+    }
+    
+    /* Fix text overflow in country tags */
+    .country-tag {
+        word-break: keep-all;
+        white-space: nowrap;
+    }
+    
+    /* Adjust itinerary cards for very small screens */
+    .itinerary-card-3d {
+        margin: 0 0.5rem;
+    }
+}
 
-    .contact-form-3d:hover {
-        transform: translateY(-5px);
+/* Extra Small Devices (iPhone SE, etc.) */
+@media (max-width: 375px) {
+    .hero-title {
+        font-size: 1.4rem;
+    }
+    
+    .title-line {
+        font-size: 1.2rem;
+    }
+    
+    .hero-badge {
+        font-size: 0.65rem;
+        padding: 0.4rem 0.8rem;
+    }
+    
+    .section-title {
+        font-size: 1.3rem;
+    }
+    
+    .country-tag {
+        font-size: 0.75rem;
+        padding: 0.7rem 0.8rem;
+        min-width: 180px;
+    }
+    
+    .btn-3d {
+        min-width: 180px;
+        padding: 0.9rem 1.2rem;
+    }
+    
+    .tours-grid,
+    .itineraries-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .gallery-grid,
+    .pictures-grid-3d {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .gallery-item,
+    .picture-item {
+        height: 180px;
+    }
+    
+    .contact-form-3d {
+        padding: 1rem;
+    }
+    
+    .recaptcha-wrapper {
+        transform: scale(0.8);
+    }
+}
+
+/* Landscape Orientation */
+@media (max-height: 600px) and (orientation: landscape) {
+    .hero-section {
+        min-height: 120vh;
+        padding-top: 120px;
+    }
+    
+    .hero-content {
+        padding: 2rem 1rem;
+    }
+    
+    .hero-title {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+    
+    .title-line {
+        font-size: 1.6rem;
+        margin-bottom: 0.2rem;
+    }
+    
+    .hero-countries {
+        margin: 1.5rem 0;
+    }
+    
+    .country-tag {
+        padding: 0.6rem 1rem;
+        font-size: 0.8rem;
+    }
+    
+    .hero-cta {
+        margin-top: 1.5rem;
+    }
+}
+
+/* Fix for iOS Safari */
+@supports (-webkit-touch-callout: none) {
+    .hero-section {
+        min-height: -webkit-fill-available;
+    }
+    
+    .section {
+        -webkit-transform: translate3d(0, 0, 0);
+    }
+}
+
+/* Smooth transitions for all interactive elements */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Ensure images are responsive */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Hide mobile menu toggle by default on desktop */
+.mobile-menu-toggle {
+    display: none;
+}
+
+/* Show mobile menu toggle on mobile */
+@media (max-width: 992px) {
+    .mobile-menu-toggle {
+        display: block;
+    }
+}
+
+/* Add these styles to your existing CSS file */
+
+/* Mobile Menu Toggle Button */
+.mobile-menu-toggle {
+    display: none;
+    background: transparent;
+    border: 2px solid var(--accent-gold);
+    color: var(--accent-gold);
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    z-index: 1001;
+}
+
+.mobile-menu-toggle:hover {
+    background: rgba(212, 175, 55, 0.1);
+}
+
+/* Prevent horizontal scroll */
+body {
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+/* Improve touch targets for mobile */
+@media (max-width: 768px) {
+    .nav-item,
+    .btn-3d,
+    .btn-itinerary,
+    .country-tag {
+        min-height: 44px; /* Apple's recommended minimum touch target */
+    }
+    
+    input,
+    textarea,
+    select,
+    button {
+        font-size: 16px; /* Prevents iOS zoom on focus */
+    }
+}
+
+/* Fix for fixed header on iOS */
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Adjust hero section for mobile */
+@media (max-width: 768px) {
+    .hero-section {
+        margin-top: 0;
+        padding-top: 80px;
+    }
+}
+
+/* Better spacing for small screens */
+@media (max-width: 576px) {
+    .hero-content {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+    
+    .section {
+        padding: 3rem 0;
+    }
+    
+    .section-header {
+        margin-bottom: 2rem;
+    }
+}
+
+/* Fix for reCAPTCHA on mobile */
+@media (max-width: 768px) {
+    .g-recaptcha {
+        transform: scale(0.9);
+        transform-origin: left top;
     }
 }
 
 @media (max-width: 576px) {
-    .container {
-        padding: 0 1.5rem;
+    .g-recaptcha {
+        transform: scale(0.8);
+        transform-origin: left top;
     }
+}
 
-    section {
-        padding: 4rem 0;
+/* Ensure proper image display */
+.gallery-img,
+.picture-img,
+.team-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Fix for cards on very small screens */
+@media (max-width: 375px) {
+    .tour-card-3d,
+    .itinerary-card-3d,
+    .team-card-3d {
+        margin: 0 0.5rem;
     }
-
-    .hero-title {
-        font-size: 2rem;
-    }
-
-    .section-title {
-        font-size: 2rem;
-    }
-
-    .section-subtitle {
-        font-size: 1rem;
-    }
-
-    .adventure-section .section-subtitle {
-        padding: 1.5rem;
-        font-size: 1.1rem;
-    }
-
-    .hero-badge {
-        font-size: 0.8rem;
-        padding: 0.6rem 1.2rem;
-    }
-
-    .country-tag {
-        font-size: 0.85rem;
-        padding: 0.8rem 1.5rem;
-    }
-
-    .tours-grid,
-    .itineraries-grid,
-    .team-grid {
-        gap: 2rem;
-    }
-
+    
     .card-front,
     .card-back {
-        padding: 2rem;
-    }
-
-    .footer {
-        padding: 3rem 0 2rem;
-    }
-
-    .gallery-grid,
-    .pictures-grid-3d {
-        gap: 1.5rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero-content {
-        padding: 40px 20px;
-    }
-
-    .section-header {
-        margin-bottom: 3rem;
-    }
-
-    .nav-inner {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 0.5rem;
-    }
-
-    .nav-item {
-        padding: 0.6rem 1.2rem;
-        font-size: 0.9rem;
-    }
-
-    .logo-front {
-        font-size: 2rem;
-    }
-
-    .logo-back {
-        font-size: 1.4rem;
-    }
-
-    .country-tag {
-        min-width: auto;
-        padding: 0.8rem 1.5rem;
-        font-size: 0.8rem;
-    }
-
-    .btn-3d {
-        padding: 1rem 2rem;
-        font-size: 1rem;
-        min-width: auto;
-    }
-
-    .card-title {
-        font-size: 1.6rem;
-    }
-
-    .card-icon {
-        font-size: 3rem;
-    }
-
-    .team-name {
-        font-size: 1.4rem;
-    }
-
-    .team-role {
-        font-size: 1rem;
-    }
-
-    .contact-form-3d {
-        padding: 2rem 1.5rem;
-    }
-
-    .form-group input,
-    .form-group textarea,
-    .form-group select {
-        font-size: 1rem;
         padding: 1rem;
     }
-
-    .form-group label {
-        font-size: 1rem;
-    }
-
-    .human-check-box {
-        padding: 2rem 1.5rem;
-    }
-
-    .footer-content {
-        gap: 2rem;
-    }
-
-    .footer-tagline {
-        font-size: 1rem;
-    }
-
-    .copyright {
-        font-size: 0.85rem;
-    }
-
-    .footer-social a {
-        width: 40px;
-        height: 40px;
-        font-size: 1rem;
-    }
-
-    /* Extra small screen optimizations */
-    .hero-section {
-        padding-top: 60px;
-    }
-
-    .scroll-indicator {
-        bottom: 1.5rem;
-    }
-
-    .adventure-section {
-        padding: 6rem 0;
-    }
-}
-
-@media (max-width: 400px) {
-    /* For very small phones (e.g., iPhone 5/SE) */
-    .container {
-        padding: 0 1rem;
-    }
-
-    .hero-title {
-        font-size: 1.8rem;
-    }
-
-    .section-title {
-        font-size: 1.8rem;
-    }
-
-    .nav-item {
-        padding: 0.5rem 1rem;
-        font-size: 0.85rem;
-    }
-
-    .btn-3d {
-        padding: 0.8rem 1.5rem;
-        font-size: 0.9rem;
-    }
-
-    .card-title {
-        font-size: 1.4rem;
-    }
-
-    .itinerary-title {
-        font-size: 1.4rem;
-    }
-
-    .human-check-title {
-        font-size: 1.2rem;
-    }
-
-    .btn-submit-3d {
-        font-size: 1rem;
-        padding: 1rem;
-    }
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
-.fade-in-up {
-    animation: fadeInUp 0.6s ease-out forwards;
-}
-
-.fade-in {
-    animation: fadeIn 0.6s ease-out forwards;
-}
-
-::-webkit-scrollbar {
-    width: 12px;
-}
-
-::-webkit-scrollbar-track {
-    background: var(--light-bg);
-}
-
-::-webkit-scrollbar-thumb {
-    background: var(--gradient-gold);
-    border-radius: 6px;
-    border: 3px solid var(--light-bg);
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(135deg, #d4af37 0%, #b8942a 100%);
 }
