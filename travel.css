@@ -420,16 +420,10 @@ h2 {
     position: relative;
 }
 
-.kyrgyzstan::after {
-    content: '✪';
-    position: absolute;
-    top: 50%;
-    right: 20px;
-    transform: translateY(-50%);
-    font-size: 1.5rem;
-    color: #FFD700;
-    text-shadow: 0 0 10px #FFD700;
-}
+
+
+/* Star removed as requested */
+/* .kyrgyzstan::after { ... } */
 
 .tajikistan {
     background: linear-gradient(135deg,
@@ -1465,14 +1459,14 @@ section {
 }
 
 .human-check-section {
-    background: var(--gradient-blue);
     padding: 4rem 0;
     margin: 2rem 0;
-    border-radius: 30px;
     position: relative;
-    overflow: hidden;
+    background-color: #f8f9fa;
+    /* From inline style */
 }
 
+/* Background pattern */
 .human-check-section::before {
     content: '';
     position: absolute;
@@ -1481,31 +1475,41 @@ section {
     width: 100%;
     height: 100%;
     background:
-        radial-gradient(circle at 10% 20%, rgba(212, 175, 55, 0.2) 0%, transparent 40%),
-        radial-gradient(circle at 90% 80%, rgba(42, 157, 143, 0.2) 0%, transparent 40%);
+        radial-gradient(circle at 10% 20%, rgba(212, 175, 55, 0.1) 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(42, 157, 143, 0.1) 0%, transparent 40%);
     z-index: 1;
 }
 
 .human-check-section .container {
     position: relative;
     z-index: 2;
+    text-align: center;
+    /* Center content */
 }
 
 .human-check-box {
-    background: rgba(255, 255, 255, 0.95);
+    background: white;
     border-radius: 20px;
     padding: 3rem;
     text-align: center;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
-    border: 2px solid rgba(212, 175, 55, 0.3);
-    max-width: 800px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    /* From inline style */
+    border: 2px solid rgba(212, 175, 55, 0.1);
+    /* Subtle border */
+    max-width: 600px;
+    /* Limit width */
     margin: 0 auto;
+    /* Center horizontally */
+    display: inline-block;
+    /* Or inline-block if we want wrapper centering */
+    width: 100%;
+    /* Be full width up to max-width */
 }
 
 .human-check-title {
     font-size: 1.8rem;
-    color: var(--primary-blue);
-    margin-bottom: 2rem;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1517,54 +1521,16 @@ section {
     font-size: 2rem;
 }
 
-.human-check-options {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 1.5rem;
-    margin: 2.5rem 0;
+.human-check-box p {
+    margin-bottom: 2rem;
+    color: #7f8c8d;
+    font-size: 1.1rem;
 }
 
-.human-check-option {
-    background: white;
-    border: 2px solid #e2e8f0;
-    border-radius: 15px;
-    padding: 1.5rem;
-    cursor: pointer;
-    transition: all 0.3s;
-    font-weight: 600;
-    color: var(--dark-text);
+.recaptcha-wrapper {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.8rem;
-}
-
-.human-check-option:hover {
-    border-color: var(--accent-teal);
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-}
-
-.human-check-option i {
-    font-size: 2rem;
-    color: var(--accent-teal);
-}
-
-.human-check-option.selected {
-    border-color: var(--accent-gold);
-    background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(212, 175, 55, 0.05) 100%);
-    color: var(--primary-blue);
-}
-
-.human-check-option.selected i {
-    color: var(--accent-gold);
-}
-
-.human-check-note {
-    color: var(--light-text);
-    font-size: 0.9rem;
-    margin-top: 1.5rem;
-    font-style: italic;
+    justify-content: center;
+    margin-bottom: 1rem;
 }
 
 .btn-submit-3d {
@@ -1874,8 +1840,24 @@ section {
         grid-column: span 1;
     }
 
-    .human-check-options {
-        grid-template-columns: repeat(2, 1fr);
+    .human-check-box {
+        padding: 1.5rem;
+        /* Even less padding for small screens */
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        box-shadow: none;
+        /* Simplify on mobile */
+        border: 1px solid #eee;
+    }
+
+    .human-check-section .container {
+        padding: 0 1rem;
+        /* Ensure container doesn't squeeze too much */
+    }
+
+    .human-check-title {
+        font-size: 1.5rem;
     }
 
     .pictures-section::before {
@@ -1941,9 +1923,12 @@ section {
         padding: 2rem;
     }
 
-    .human-check-options {
-        grid-template-columns: 1fr;
+    .card-front,
+    .card-back {
+        padding: 2rem;
     }
+
+    /* Old options grid removed */
 
     .footer {
         padding: 3rem 0 2rem;
